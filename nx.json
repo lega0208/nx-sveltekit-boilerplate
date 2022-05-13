@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "nx-nest-svelte-boilerplate",
+  "npmScope": "nx-sveltekit-boilerplate",
   "affected": {
     "defaultBase": "master"
   },
@@ -16,9 +16,10 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "OTc4OTJkODUtNTNhYS00NzY3LTg2ZTUtODg5NzEzZjk4MjFhfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -29,6 +30,5 @@
         "projects": "dependencies"
       }
     ]
-  },
-  "defaultProject": "sveltekit-boilerplate"
+  }
 }
