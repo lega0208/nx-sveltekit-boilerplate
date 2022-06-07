@@ -1,0 +1,76 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+@layer base {
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local(OpenSans-Light),
+      url(//fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXZ2MAKAc2x4R1uOSeegc5U.eot?#)
+        format('eot'),
+      url(//fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2)
+        format('woff2'),
+      url(//fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff)
+        format('woff');
+  }
+
+  @font-face {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    src: local(Raleway),
+      url(//fonts.gstatic.com/s/raleway/v9/JDau3G46nqY5-B-S9E_nwg.eot?#)
+        format('eot'),
+      url(//fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2)
+        format('woff2'),
+      url(//fonts.gstatic.com/s/raleway/v9/IczWvq5y_Cwwv_rBjOtT0w.woff)
+        format('woff');
+  }
+
+  body {
+    height: 99vh;
+    @apply bg-gray-lighter;
+  }
+
+  #svelte {
+    height: 100%;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  form {
+    @apply block rounded bg-white p-3 shadow-md;
+  }
+}
+
+@layer utilities {
+  .h-50 {
+    height: 50%;
+  }
+
+  .font-opensans {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+.btn {
+  @apply rounded py-1 px-2 font-semibold shadow;
+}
+
+.btn-cta {
+  @apply btn border-cta-dark bg-cta text-white;
+}
+
+.btn-cta:hover {
+  @apply bg-cta-dark;
+}
